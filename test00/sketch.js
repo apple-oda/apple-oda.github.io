@@ -1,14 +1,32 @@
-function setup(){
+// おみくじの内容
+const omikuji = ["aa", "吉", "中吉", "小吉", "末吉", "凶"];
+// おみくじの結果
+let omikujiResult;
+
+function setup() {
     createCanvas(windowWidth,windowHeight);
-    background(220);
+
+    // 文字の基準点を上下左右の中央に
+    textAlign(CENTER, CENTER);
+    // 文字の大きさの設定
+    textSize(100);
+
+    // おみくじの結果をランダムにセット
+    omikujiResult = random(omikuji);
 }
 
 function draw() {
-    text("hello world!", 50,50)
-    if (mouseIsPressed) {
-        fill(0);
-    } else {
-        fill(255);
+    background("#e02020");
+
+    fill("#FFFFFF");
+    stroke("#FFFFFF");
+  
+    // おみくじの結果を表示
+    text(omikujiResult, width / 2, height / 2);
+
+    // クリックされている間の処理
+    if (mouseIsPressed == true) {
+        // おみくじの結果をランダムにセット
+        omikujiResult = random(omikuji);
     }
-    ellipse(mouseX,mouseY,80,80);
 }
