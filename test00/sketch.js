@@ -1,5 +1,5 @@
 // おみくじの内容
-const omikuji = ["aa", "吉", "中吉", "小吉", "末吉", "凶"];
+const omikuji = ["大吉", "吉", "中吉", "小吉", "末吉", "凶"];
 // おみくじの結果
 let omikujiResult;
 
