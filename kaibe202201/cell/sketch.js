@@ -1,3 +1,6 @@
+const w= window.innerWidth;
+const h = window.innerHeight;
+
 let x = [];
 let y = [];
 let s = [];
@@ -10,8 +13,6 @@ let b = [];
 let a = [];
 
 function setup() {
-  const w = windowWidth;
-  const h = windowHeight;
   createCanvas(w, h);
   for(let i=0;i<=100;i++) {
     x[i] = random(w);
@@ -29,8 +30,7 @@ function setup() {
 }
 
 function draw() {
-  const w = windowWidth;
-  const h = windowHeight;
+  
   background(0);
 
   for(let i=0;i<=100;i++){  
@@ -54,3 +54,4 @@ function draw() {
   }
    
 }
+
