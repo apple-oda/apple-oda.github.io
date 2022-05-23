@@ -1,58 +1,402 @@
-// let fromColor, toColor, radius
-// let speed =10;
-// let mouth=1;
-//
-// function setup() {
-//     createCanvas(windowWidth, windowHeight);
-//     background(0);
-//     ellipseMode(RADIUS);
-//     noFill();
-// }
-//
-// function draw() {
-//
-//     background(33);     // 背景をグレーで塗りつぶす
-//
-//     fill(255, 255, 0);
-//     ellipse(mouseX, mouseY, 120, 120);
-//     fill(0);
-//     ellipse(mouseX-40, mouseY-60, 10, 15);   // 左目
-//     ellipse(mouseX+40, mouseY-60, 10, 15);   // 右目
-//     noFill();
-//     fill(0);
-//     if(speed <=10 || speed >=60) mouth = mouth * (-1);
-//     ellipse(mouseX,mouseY+50, 80, speed-=mouth);
-// }
+const w = window.innerWidth;
+const h = window.innerHeight;
+const BLOCK_X_SIZE = 30;  // ブロック1つのサイズ
+const BLOCK_Y_SIZE = 30;  // ブロック1つのサイズ
 
-let i = 10;
-speed = 1 // speed of mouth opening & closing
+// ステージ
+const STAGE_Y_SIZE = 24;
+const STAGE_X_SIZE = 14;
+
+let stage = [
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+	[ 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]];
+
+const BLOCK_KINDS_Y_SIZE = 4;
+const BLOCK_KINDS_X_SIZE = 4;
+
+let result;
+let currentBlock;
+
+let block_kinds = [BLOCK_KINDS_Y_SIZE] [BLOCK_KINDS_X_SIZE];
+let block_temp  = [BLOCK_KINDS_Y_SIZE] [BLOCK_KINDS_X_SIZE];
+let block_next  = [BLOCK_KINDS_Y_SIZE] [BLOCK_KINDS_X_SIZE];                
+
+
+
+
+let BLOCK_I = [
+	[ 0, 1, 0, 0 ],
+	[ 0, 1, 0, 0 ],
+	[ 0, 1, 0, 0 ],
+	[ 0, 1, 0, 0 ]];
+
+let BLOCK_O = [
+	[ 0, 0, 0, 0 ],
+	[ 2, 2, 0, 0 ],
+	[ 2, 2, 0, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let BLOCK_T = [
+	[ 0, 0, 0, 0 ],
+	[ 3, 3, 3, 0 ],
+	[ 0, 3, 0, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let BLOCK_J = [
+	[ 0, 4, 0, 0 ],
+	[ 0, 4, 0, 0 ],
+	[ 4, 4, 0, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let BLOCK_L = [
+	[ 5, 0, 0, 0 ],
+	[ 5, 0, 0, 0 ],
+	[ 5, 5, 0, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let BLOCK_S = [
+	[ 0, 0, 0, 0 ],
+	[ 0, 6, 6, 0 ],
+	[ 6, 6, 0, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let BLOCK_Z = [
+	[ 0, 0, 0, 0 ],
+	[ 7, 7, 0, 0 ],
+	[ 0, 7, 7, 0 ],
+	[ 0, 0, 0, 0 ]];
+
+let y;
+let x;
+
+let score;
+
+let loopEnd;
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-    angleMode(DEGREES);
-    background(0);
+  createCanvas(w, h);
+  y = 0;
+  x = 5;
+  blockNext();
+  currentBlock = result;
+  block_kinds = block_next;
+  blockNext();
+  score = 0;
+  loopEnd = false;
 }
 
 function draw() {
+  
+  background(0);
 
-    background(33);     // 背景をグレーで塗りつぶす
+  //　ステージの描画
+  stage_draw();
 
-    text("hello world!", 50, 50)
-    fill(mouseX);
-    ellipse(mouseX, mouseY, 200, 200);
-    fill(0);
-    if(i < 10 || i > 45) speed = speed*(-1); 
-    arc(mouseX, mouseY, 200, 200, (i-=speed)+300, ((i-=speed))*-1);
-    //arc(mouseX, mouseY, 200, 200, 315, 45);
-    //arc(mouseX, mouseY, 200, 200, 350, 10);
+  // // ブロックの描画
+  block_draw(0);
+  block_draw(1);
 
-//    350 - 315 = 35
-//    45 - 10 = 35 
+  // タイトル表示
+  fill(255,0,255);
+  textSize(20);
+  text("TETRIS_MODOKI", 430, 20);
+  fill(255,255,255);
+  textSize(20);
+  text("SCORE=" + score, 430, 50);
+  text("NEXT BLOCK", 430, 80);
+
+  if (block_check(1)) {
+    stageUpdate();
+    let by = parseInt(y);
+    if(by == 0) {
+      fill(255,0,0);
+      textSize(20);
+      text("GAME OVER", 430, 280);
+      loopEnd = true;
+      let stage_init = [ 
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9],
+        [ 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]];
+      stage = stage_init;
+    }
+    if (loopEnd){
+      noLoop();
+    } else {
+      y = 0;
+      x = 5;
+      block_kinds = block_next;
+      currentBlock = result;
+      blockNext();
+      block_draw(1);  
+      
+    }
+  }
+  lineCheck();
+  y = y + 0.05;
+}
+
+function lineCheck() {
+  let i;
+  for(i=STAGE_Y_SIZE-2; i>0; i--)
+  {
+    let xAlign = 0;
+    for(let j=0; j<STAGE_X_SIZE; j++)
+    {
+        if(!stage[i][j]==0) {
+          xAlign++;
+        }
+    }
+    if (xAlign==STAGE_X_SIZE) {
+      for(let k=i;k>0; k--)
+      {
+        stage[k] = stage[k-1];
+      }
+      score += 100;
+    }
+  }
+}
+
+function block_check(directionFg) {
+  for(let i=0; i<BLOCK_KINDS_Y_SIZE; i++ )
+  {
+    for(let j=0; j<BLOCK_KINDS_X_SIZE; j++ )
+    {
+      if(!block_kinds[i][j] == 0) {
+        let by;
+        let bx;
+        switch (directionFg) {
+          case 0:       // 上方向チェック                
+            break;
+          case 1:       // 下方向チェック
+            by = parseInt(y+1);
+            bx = parseInt(x);
+            break;
+          case 2:       // 右方向チェック
+            by = parseInt(y);
+            bx = parseInt(x+1);
+            break;
+          case 3:       // 左方向チェック
+            by = parseInt(y);
+            bx = parseInt(x-1);
+            break;
+          case 4:       // 下方向チェック
+            by = parseInt(y+3);
+            bx = parseInt(x);
+            break;
+        }
+        if(!stage[i+by][j+bx] == 0) {
+          return 1;
+        }
+      }
+    }
+  } 
+  return 0;
+}
+
+function stageUpdate() {
+  for(let i=0; i<BLOCK_KINDS_Y_SIZE; i++ )
+  {
+    for(let j=0; j<BLOCK_KINDS_X_SIZE; j++ )
+    {
+        if(!block_kinds[i][j]==0){
+          let by = parseInt(y);
+          let bx = parseInt(x);
+          stage[i+by][j+bx]  = block_kinds[i][j];
+        }
+    }
+  }  
+}
+
+function blockNext() {
+
+    result = Math.floor(Math.random()*7);
+    switch (result) {
+        case 0:
+            block_next = BLOCK_Z;
+            break;
+        case 1:
+            block_next = BLOCK_T;
+            break;
+        case 2:
+            block_next = BLOCK_S;
+            break;
+        case 3:
+            block_next = BLOCK_O;
+            break;
+        case 4:
+            block_next = BLOCK_L;
+            break;
+        case 5:
+            block_next = BLOCK_J;
+            break;
+        case 6:
+            block_next = BLOCK_I;
+            break;
+        default:
+            block_next = BLOCK_I;
+            break;
+    }
+  
+}
+
+function keyPressed() {
+
+  if (keyCode === UP_ARROW) {     // 上キー 回転
+    if (currentBlock !== 3) {
+         block_kinds = blockRotate();
+    }
+  }
+  if (keyCode === DOWN_ARROW) {   // 下キー 落ちる速度をあげる
+    if (!block_check(4)) {
+       y = y + 3;
+    }
+  }
+  if (keyCode === RIGHT_ARROW) {   // 右キー 右移動
+    if (!block_check(2)) {
+       x = x + 1;
+    }
+  }
+  if (keyCode === LEFT_ARROW) {    // 左キー 左移動
+    if (!block_check(3)) {
+      x = x - 1;
+    }
+  }
 
 }
-    // 
 
-// //   //オブジェクトの色をランダム（透明度70）
-// //   fill(random(255),random(255),random(255),70);
-// //   //キャンバスの中心に直径100pxの丸を描画
-// //   ellipse(random(width),random(height),random(100));
+function blockRotate() {
+  let block_temp = [
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ],];
+  // 回転していいか判定
+  for(let i=0; i<BLOCK_KINDS_Y_SIZE; i++ )
+  {
+    for(let j=0; j<BLOCK_KINDS_X_SIZE; j++ )
+    {
+    	if(block_kinds[i][j] !== 0 && stage[parseInt(y+j)][parseInt(x+(3-i))] !== 0) {
+    	   return block_kinds;
+    	}
+    }
+  }
+  // 回転
+  for(let i=0; i<BLOCK_KINDS_Y_SIZE; i++ )
+  {
+    for(let j=0; j<BLOCK_KINDS_X_SIZE; j++ )
+    {
+      block_temp[j][3-i] = block_kinds[i][j];
+    }
+  }
+  return  block_temp;
+}
+
+function block_draw(block_where) {
+  for(let i=0; i<BLOCK_KINDS_Y_SIZE; i++ )
+  {
+    for(let j=0; j<BLOCK_KINDS_X_SIZE; j++ )
+    {
+        let fill_Color;
+        if(block_where === 0) {
+          fill_Color = block_kinds[i][j];
+        } else {
+          fill_Color = block_next[i][j];
+        }
+        setColor(fill_Color);
+        if (!fill_Color==0){
+          if (block_where === 0) {
+            rect((j+x)*BLOCK_X_SIZE, (i+y)*BLOCK_Y_SIZE, BLOCK_X_SIZE ,BLOCK_Y_SIZE);
+          } else {
+            rect((j)*BLOCK_X_SIZE+500, (i)*BLOCK_Y_SIZE+100, BLOCK_X_SIZE ,BLOCK_Y_SIZE);
+          }
+        } 
+    } 
+  } 
+}
+
+function stage_draw() {
+  for(let i=0; i<STAGE_Y_SIZE; i++ )
+  {
+    for(let j=0; j<STAGE_X_SIZE; j++ )
+    {
+      setColor(stage[i][j]);
+      rect(j*BLOCK_X_SIZE, i*BLOCK_Y_SIZE, BLOCK_X_SIZE ,BLOCK_Y_SIZE);
+    }
+  }
+}
+
+function setColor(prnColor){
+
+   switch (prnColor){
+     case 0:   // くろ
+         fill(0,0,0);
+         break;
+     case 1:   // みずいろ
+         fill(0,255,255);
+         break;
+     case 2:   // きいろ
+         fill(255,255,0);
+         break;
+     case 3:   // むらさき
+         fill(255,0,255);
+         break;
+     case 4:   // あお
+         fill(0,0,255);
+         break;
+     case 5:   // オレンジ
+         fill(243,152,0);
+         break;
+     case 6:   // みどり
+         fill(0,128,0);
+         break;
+     case 7:   // あか
+         fill(255,0,0);
+         break;
+     case 9:   // グレー
+         fill(125,125,125);
+         break;
+   }
+}
