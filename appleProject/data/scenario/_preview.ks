@@ -4,7 +4,7 @@
 [mask_off time=10]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="千石陽翔"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
-[bg  storage="title.jpg"  time="1000"  method="zoomIn"  ]
+[bg  time="1000"  method="crossfade"  storage="title.jpg"  ]
 [tb_show_message_window  ]
 [cm  ]
 [tb_start_text mode=2 ]
@@ -12,7 +12,7 @@
 「えぇーーーーーっ！？　廃部！？　部室も道具もあるのに！？」[l][r]
 [_tb_end_text]
 
-[bg  time="1000"  method="slideInDown"  storage="room2.jpg"  ]
+[bg  time="1000"  method="fadeIn"  storage="room2.jpg"  ]
 [cm  ]
 [tb_start_text mode=2 ]
 #
@@ -73,7 +73,7 @@
 [_tb_end_text]
 
 [live2d_hide  name="oda"  ]
-[bg  time="1000"  method="slideInLeft"  storage="rouka.jpg"  ]
+[bg  time="1000"  method="fadeIn"  storage="rouka.jpg"  ]
 [live2d_show  name="oda"  x="0.62"  y="-0.31"  scale="1.39"  ]
 [tb_start_text mode=1 ]
 #千石陽翔
