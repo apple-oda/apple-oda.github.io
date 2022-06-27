@@ -130,11 +130,6 @@
 			"Id": "ParamHairSide",
 			"GroupId": "",
 			"Name": "髪揺れ　横"
-		},
-		{
-			"Id": "ParamHairBack",
-			"GroupId": "",
-			"Name": "髪揺れ　後"
 		}
 	],
 	"ParameterGroups": [],
