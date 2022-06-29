@@ -23,19 +23,22 @@
 [_tb_end_text]
 
 [cm  ]
+[chara_show  name="メルシー"  time="1000"  wait="true"  left="690"  top="118"  width=""  height=""  reflect="false"  ]
 [tb_start_text mode=1 ]
 #背の高い女子
 「ごめんなさい、ちょっと考えさせてくださいっ！」[p]
 [_tb_end_text]
 
-[cm  ]
-[tb_start_text mode=2 ]
+[tb_start_text mode=1 ]
 #
-勢いよく頭を下げ、ようよう上級生が散っていく。[l][r]
-息をついた少女が、こちらに気が付いた。[l][r]
+勢いよく頭を下げ、ようよう上級生が散っていく。[p]
 [_tb_end_text]
 
-[cm  ]
+[tb_start_text mode=1 ]
+#
+息をついた少女が、こちらに気が付いた。[p]
+[_tb_end_text]
+
 [tb_start_text mode=1 ]
 #背の高い女子
 「………見てたの？」[p]
@@ -52,7 +55,7 @@
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-#千石陽翔
+#
 ため息を吐く少女は、心の底からうんざりしていそうだった。[p]
 [_tb_end_text]
 
@@ -121,14 +124,16 @@
 「そりゃもちろん、全国大会優勝！ってね」[p]
 [_tb_end_text]
 
-[cm  ]
-[tb_start_text mode=2 ]
+[tb_start_text mode=1 ]
 #
-自分で言ってから少し気恥ずかしくなって鼻をこする。[l][r]
-少女はじっと視線を合わせた後、笑顔で頷いて口を開いた。[l][r]
+自分で言ってから少し気恥ずかしくなって鼻をこする。[p]
 [_tb_end_text]
 
-[cm  ]
+[tb_start_text mode=1 ]
+#
+少女はじっと視線を合わせた後、笑顔で頷いて口を開いた。[p]
+[_tb_end_text]
+
 [tb_start_text mode=1 ]
 #背の高い女子
 「うーん…ねぇ、乗らせてもらっていいかな」[p]
@@ -144,7 +149,6 @@
 「いいのいいの。いい加減決めなきゃうるさいなーって思ってたところだし、ね。それに…君、どこまでも飛べそうな瞳をしてるし」[p]
 [_tb_end_text]
 
-[cm  ]
 [tb_start_text mode=1 ]
 #
 朗らかに笑いながら少女は言う。[p]
@@ -155,7 +159,6 @@
 「ありがとう！」[p]
 [_tb_end_text]
 
-[chara_show  name="メルシー"  time="1000"  wait="true"  left="687"  top="101"  width=""  height=""  reflect="false"  ]
 [tb_start_text mode=1 ]
 #メルシー
 「どういたしまして。私はメルシエーシュタ。メルシーって呼んでね」[p]
@@ -171,12 +174,24 @@
 「うん、よろしくね、陽翔君」[p]
 [_tb_end_text]
 
-[cm  ]
 [tb_start_text mode=1 ]
 #
 二人はどちらからともなく握手を交わした。[p]
 [_tb_end_text]
 
-[cm  ]
 [chara_hide  name="メルシー"  time="1000"  wait="true"  pos_mode="true"  ]
+[tb_start_tyrano_code]
+[if exp="sf.flgS2a=='false'"]
+[eval exp="sf.flgS2a='true'"]
+[endif]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
+[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
 [jump  storage="scene3.ks"  target=""  ]
+[endif]
+
+
+[_tb_end_tyrano_code]
+
+[jump  storage="scene1.ks"  target="*LB1001"  ]

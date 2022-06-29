@@ -339,11 +339,6 @@
 [chara_show  name="メルシー"  time="1000"  wait="true"  left="672"  top="83"  width="654"  height="654"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #メルシー
-「そっかぁ…頼られちゃったんならしょうがないね。頑張って」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#メルシー
 「そっかぁ…頼られちゃったんならしょうがないね。[ruby text="Good"]頑張[ruby text="luck"]って」[p]
 [_tb_end_text]
 

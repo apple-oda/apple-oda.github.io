@@ -14,10 +14,6 @@
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-#
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
 #千石陽翔
 (どう貼ろうかな……こうでいいかな…)[p]
 [_tb_end_text]
@@ -81,9 +77,13 @@
 「………」[p]
 [_tb_end_text]
 
+[tb_start_text mode=1 ]
+#
+そんなに酷いだろうか。と見直して、先輩が持つポスターに目をやる。[p]
+[_tb_end_text]
+
 [tb_start_text mode=2 ]
 #
-そんなに酷いだろうか。と見直して、先輩が持つポスターに目をやる。[l][r]
 美術部員募集、と書かれたそのポスターは、自分が持っているのとは明らかに出来に差があった。[l][r]
 ちょっとうなだれていると、先輩は少し唸ってこう切り出した。[l][r]
 [_tb_end_text]
@@ -226,7 +226,18 @@
 陽翔が去っていった方を、その人影は見つめ続けていた。[p]
 [_tb_end_text]
 
-[cm  ]
 [live2d_hide  name="ishi"  ]
 [live2d_hide  name="oda"  ]
+[tb_start_tyrano_code]
+[if exp="sf.flgS2b=='false'"]
+[eval exp="sf.flgS2b='true'"]
+[endif]
+[_tb_end_tyrano_code]
+
+[tb_start_tyrano_code]
+[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
 [jump  storage="scene3.ks"  target=""  ]
+[endif]
+[_tb_end_tyrano_code]
+
+[jump  storage="scene1.ks"  target="*LB1001"  ]

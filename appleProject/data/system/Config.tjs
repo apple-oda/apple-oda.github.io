@@ -1,6 +1,4 @@
 //ティラノビルダーによる自動ビルド　
-;debugMenu.visible=false
-;configSave=webstorage
 ;global.config_version=5.00
 ;System.title=appleProject
 ;projectID=appleProject
@@ -35,6 +33,7 @@
 ;configVisible=true
 ;configLeft=-1
 ;configTop=-1
+;configSave=webstorage
 ;configThumbnail=true
 ;configThumbnailQuality=middle
 ;configSaveSlotNum=5
@@ -64,6 +63,7 @@
 ;mt=16
 ;mw=960-32
 ;mh=640-32
+;debugMenu.visible=true
 ;frameColor=0x000000
 ;frameOpacity=128
 ;defaultAutoReturn=true

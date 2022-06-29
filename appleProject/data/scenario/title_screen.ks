@@ -18,6 +18,14 @@
 
 [cm  ]
 [tb_keyconfig  flag="1"  ]
+[tb_start_tyrano_code]
+[eval exp="sf.flgS2a='false'"]
+[eval exp="sf.flgS2b='false'"]
+[eval exp="sf.flgS2c='false'"]
+[eval exp="sf.flgS2d='false'"]
+[eval exp="sf.flgS2e='false'"]
+[_tb_end_tyrano_code]
+
 [jump  storage="scene1.ks"  target=""  ]
 [s  ]
 *load
