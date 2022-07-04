@@ -1,8 +1,6 @@
 
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="fadeIn"  storage="schoolgate-day.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #千石陽翔
@@ -76,9 +74,9 @@
 頑張れよ、みたいに笑って肩を叩きながら、彼は去っていった。[p]
 [_tb_end_text]
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="1000"  method="fadeIn"  storage="sora.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="fadeIn"  storage="sora.jpg"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 #
 ……もうちょっと英語勉強しとくんだった…と後悔した陽翔であった。[p]

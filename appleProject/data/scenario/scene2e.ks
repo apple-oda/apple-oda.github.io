@@ -1,8 +1,6 @@
 
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="crossfade"  storage="koutei.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #先生
@@ -73,9 +71,9 @@
 [_tb_end_text]
 
 [cm  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="1000"  method="crossfade"  storage="sora.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="crossfade"  storage="sora.jpg"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 #？？？
 「…………最悪だ」[p]

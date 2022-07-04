@@ -2,258 +2,355 @@
 
 [mask time=10]
 [mask_off time=10]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="1000"  method="fadeIn"  storage="schoo-library-daytime.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[chara_show  name="相場一輝"  time="1000"  wait="true"  left="781"  top="132"  width="599"  height="599"  reflect="false"  ]
-[tb_start_text mode=2 ]
-相場一輝は、一介の本読みである。[l][r]
-本の虫、と言ってもいい。[l][r]
-中学校でも図書室に通い詰め、『図書室の主』とあだ名された程度には本が好きだ。[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_text mode=2 ]
-そんな彼にとって、読書部は非常に居心地のいい居場所だった。[l][r]
-しかし、この高校の部活に読書部はなかった。[l][r]
-それは彼にとっては多少残念な事であったが、部活がないなら一人で読みふければいい話だ。[l][r]
-親がうるさいことを除けば、別段変わることはない。静かな、穏便な生活が続く———[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
+[bg  time="1000"  method="fadeIn"  storage="room.jpg"  ]
+[tb_show_message_window  ]
+[chara_show  name="須田友朗"  time="1000"  wait="true"  left="684"  top="128"  width="597"  height="595"  reflect="false"  ]
 [tb_start_text mode=1 ]
-#
-はずだったのだが。[p]
+#須田友朗
+「よー、千石」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
 #千石陽翔
-「お願い相場君、力を貸して！」[p]
+「友くん。久しぶり」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「おう、それで話ってなんだ？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「実は……（かくかくしかじか）」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「ってことで、演劇部入ってほしいんだよ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「へー、お前そんな夢あったんだ。てっきり高校でも吹奏楽やるもんだと思ってたぜ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「うん、力貸してくれないかな」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「いやー、中学時代世話になったしそうしたいのは山々なんだけどさ。もう入っちゃったんだよな吹奏楽部」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「あ…………そっか。ごめんね」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「いやいやいいんだよ……でもちょっとだけ問題があってだな」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「問題？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「あーうん。実は部長にお前のこと話しちゃって……あ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「何？あ、って」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「………廊下。見てみ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「………あ」[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
 #
-
+そこには、明らかに先輩とわかる貫禄ある生徒が立っていた。[p]
 [_tb_end_text]
 
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「失礼。須田、こっちが前話してた千石君かい？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「あ、はい。そうっす」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「あ、初めまして」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「うんうん、初めまして。そしていきなりで悪いが、俺は君をスカウトしに来た」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「うわ、マジっすか」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「え、スカウトって…」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「須田の話じゃあ君、中学の頃はパートリーダーだったんだろ？いきなり任せるとは言えないが、経験者は貴重な戦力なんだ。頼む！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「俺からも頼むよ。お前との部活、ほんと楽しかったからさ。頼む！」[p]
+[_tb_end_text]
 
 [tb_start_text mode=2 ]
-目の前で頭を下げる騒々しい少年がいる。[l][r]
-別に友人ではない。なんなら同じクラスでさえない。[l][r]
-入学式の朝に、たまたま同じ時間に登校して声を掛けて少し話した、たったそれだけの縁を辿って彼は頼みごとをしに来たのである。[l][r]
-神経が鋼鉄でできてるんじゃないか、という疑念を脇に置いて口を開く。[l][r]
+#千石陽翔
+「…………」[l][r]
+[_tb_end_text]
+
+[glink  color="black"  storage="scene3.ks"  size="20"  x="883"  y="32"  text="夢を追い続ける"  target="*LB3001"  ]
+[glink  color="black"  storage="scene3.ks"  size="20"  text="勧誘に応じる"  x="883"  y="96"  target="*LB3002"  ]
+[s  ]
+*LB3001
+
+[tb_start_text mode=3 ]
+#
+[wait time=500]確かに、迷った。けれど、僕は———[p][wait_cancel][r]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「…ごめんなさい」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「……理由を聞いてもいいかな？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「僕、演劇部を作り直すんです。実は、友君と話してたのもそのためで」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「演劇部？あぁ、去年とうとう潰れたっていう……」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「はい。でも、諦めたくないので。ごめんなさい、部長さん」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「………うん、そうか。夢を追うってのはいいことだ。応援してるぞ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「…まじかよ。お前、本気で？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#
+少しの沈黙。少し深呼吸をしてから、友朗が口を開いた。[p]
+[_tb_end_text]
+
+[tb_start_text mode=3 ]
+#須田友朗
+[wait time=500]「………ばーか。絶対嫌に決まってるだろ」[p][wait_cancel][r]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「…ほんと、ごめん」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「違う違う。お前が楽しそうなことやってるの指咥えて見てるのは嫌だってことだっつーの……そういうわけなので部長」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「……」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#
+その先の言葉を予想してか、部長は険しい顔になる。[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「早々にすんません、今日付で退部します！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「…そうか、仕方ないな……なんて言うと思ったかこの馬鹿野郎！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「ヒッ、すんませんすんません！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#
+怒号に怯える友朗。だが、続いた言葉は退部を詰るものではなかった。[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「お前の退部を認めるのは演劇部再興の目途が立ってからだ！まだ部活になるかどうかもわからんだろうが！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「あ、それもそっすね」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「…そういうわけだ、千石陽翔。きっちり目途立ててから迎えに来い」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「なんかプロポーズみたいで嫌なんすけど！？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「娘は嫁にやらん！ってやつだね。アッハハハ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「笑いごとかよ！…まぁ、うん。頑張れよ！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「挫折した時はいつでも来いよ、吹奏楽部はお前を歓迎する」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「未練がましいっすよー部長ー」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「うるさいっ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=2 ]
+#
+騒がしくしながら、二人は去っていった。[l][r]
+[_tb_end_text]
+
+[s  ]
+*LB3002
+
+[tb_start_text mode=3 ]
+#
+[wait time=500]後ろ髪を引かれるような思いはあった。けれど、こうまで買ってくれるなら…[p][wait_cancel][r]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「…わかりました」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#吹奏楽部部長
+「そうか！じゃあ入部届取ってくるからな、待ってろ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「いやそこは持ってきときましょうよ部長ー」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#
+二人は去っていく部長を見送った。[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「……いいのか？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#千石陽翔
+「…うん。もう誘った人たちには謝らないとだけど……うん。いいんだよ」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#須田友朗
+「…ま、お前がそう言うならいいか！改めてよろしくな！」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#
+肩を叩かれて、陽翔は苦笑いしながらうなずいた。[p]
+[_tb_end_text]
+
+[chara_hide  name="須田友朗"  time="1000"  wait="true"  pos_mode="true"  ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[tb_start_text mode=4 ]
+#
+———後日。
+[_tb_end_text]
+
+[mask_off  time="500"  effect="fadeOut"  ]
+[tb_start_text mode=4 ]
+[l]
 [_tb_end_text]
 
 [cm  ]
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
+[chara_show  name="メルシー"  time="1000"  wait="true"  left="32"  top="77"  width="654"  height="654"  reflect="false"  ]
 [tb_start_text mode=1 ]
+#メルシー
+「そっかぁ…頼られちゃったんならしょうがないね。[ruby text="Good"]頑張[ruby text="luck"]って」[p]
+[_tb_end_text]
+
+[chara_show  name="相場一輝"  time="1000"  wait="true"  left="510"  top="19"  width="844"  height="842"  reflect="false"  ]
+[tb_start_text mode=2 ]
 #相場一輝
-「演劇部に入って、って…そんな部活あったっけ」[p]
+「そっか………うん、別にそれならそれでいいよ。うん、いいよ、別に…」[l][r]
 [_tb_end_text]
 
-[tb_start_text mode=1 ]
-#千石陽翔
-「あったんだよ。でももう誰もいないから廃部になっただけ」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#相場一輝
-「………それは公平に見ると『もうない』が正しいんじゃないかな…」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「だから作り直すのに部員が要るんだよぅ」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=2 ]
-お願い、と再び頭を下げる少年を前に少し考える。[l][r]
-一番いいのはこの場では承諾してやっぱり集まらなくてダメでした、というのだろう。[l][r]
-だが眼前の少年は自分とは真逆の陽キャである。その気になれば既定の人数ぐらいどうにか工面するかもしれない。[l][r]
-そうなったら穏便な日々は崩れ去ってしまうだろう。[l][r]
-諦めてもらうのが一番だろう、という思考とともに。[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=1 ]
-#相場一輝
-「…ないならないでしょうがないじゃないか、諦めて他の部活に……」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「それは嫌だ」[p]
-[_tb_end_text]
-
-[tb_start_text mode=2 ]
-#
-思ったより強い拒絶が返って目を開く。[l][r]
-どうしてもやりたいんだ、という意思を感じる口調だった。[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_text mode=1 ]
-#相場一輝
-「………だったら、何で僕に？ほかにもっといい人いっぱいいるだろ」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「入学式の時さ、いっぱい好きな本の話してくれただろ？自分で書くこともあるって」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=2 ]
-#
-だから台本を書いてほしい、という言葉に目からうろこが落ちた。[l][r]
-そうか、演劇部というのは既存の台本で演じるだけではないのか、という驚きだった。[l][r]
-自分の書いた台本が、目の前で演じられる———それは想像するだけでこそばゆく、また甘美な誘いに感じられた。[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「それに…どうせ優勝するなら、友達の書いた台本で勝ちたい」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#相場一輝
-「そう………って待って、優勝？」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「うん、優勝。それが目標だからね」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=2 ]
-友達、という発言にびっくりもしたがそれよりも優勝、という言葉に驚いた。[l][r]
-詳しくはないが、おそらく演劇にも甲子園のような大会があるのだろう。[l][r]
-それで優勝。この廃部になったという現状から、彼は本気でそれを目指す気なのだ。[l][r]
-それでは、まるで———[l][r]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「……相場君？大丈夫？」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#相場一輝
-「……ふふふ、ごめん、ちょっと…」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-@layopt layer=message0 visible=true
-[position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=1 ]
-[ruby text="・"]ま[ruby text="・"]る[ruby text="・"]で[ruby text="・"]小[ruby text="・"]説[ruby text="・"]の[ruby text="・"]主[ruby text="・"]人[ruby text="・"]公[ruby text="・"]み[ruby text="・"]た[ruby text="・"]い[ruby text="・"]じ[ruby text="・"]ゃ[ruby text="・"]な[ruby text="・"]い[ruby text="・"]か[ruby text="・"]。[p]
-[_tb_end_text]
-
-[cm  ]
-[tb_start_text mode=1 ]
-そんな言葉が脳内を過り、相場は笑いを堪えるのに苦労することとなった。[p]
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-[position layer=message0 width=1240 height=237 top=417 left=20 color=black opacity=180]
-[_tb_end_tyrano_code]
-
-[tb_start_text mode=1 ]
-#相場一輝
-「うん、いいよ。ちょうどいい部活が無くて困ってたところだし」[p]
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#千石陽翔
-「ほんと！？ありがとう相場君！」[p]
-[_tb_end_text]
-
-[tb_start_text mode=2 ]
-#
-太陽のごとき笑顔で両手を握る少年。[l][r]
-相場は苦笑する以外なかった。[l][r]
-[_tb_end_text]
-
-[cm  ]
-[chara_hide  name="相場一輝"  time="1000"  wait="true"  pos_mode="true"  ]
-[bg  time="1000"  method="crossfade"  storage="sora.jpg"  ]
-[tb_start_text mode=1 ]
-#
-———物語に引きこもった少年は、物語のような少年によって、現実へと引きずり出されたのである。[p]
-[_tb_end_text]
-
-[tb_start_tyrano_code]
-[if exp="sf.flgS2c=='false'"]
-[eval exp="sf.flgS2c='true'"]
-[endif]
-[_tb_end_tyrano_code]
-
-[tb_start_tyrano_code]
-[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
-[jump  storage="scene3.ks"  target=""  ]
-[endif]
-[_tb_end_tyrano_code]
-
-[jump  storage="scene1.ks"  target="*LB1001"  ]
+[s  ]

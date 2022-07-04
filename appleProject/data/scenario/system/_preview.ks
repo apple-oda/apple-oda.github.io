@@ -1,3 +1,3 @@
-[preload  storage="./data/bgimage/schoo-library-daytime.jpg"  ]
-[preload  storage="./data/bgimage/sora.jpg"  ]
+[preload  storage="./data/bgimage/room.jpg"  ]
+[preload  storage="./data/bgimage/corridor-day.jpg"  ]
 [return] 

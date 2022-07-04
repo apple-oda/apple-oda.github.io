@@ -1,8 +1,6 @@
 
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="fadeIn"  storage="room.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [chara_show  name="須田友朗"  time="1000"  wait="true"  left="684"  top="128"  width="597"  height="595"  reflect="false"  ]
 [tb_start_text mode=1 ]
@@ -135,9 +133,9 @@
 [s  ]
 *LB3001
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=3 ]
 #
-確かに、迷った。けれど、僕は———[p]
+[wait time=500]確かに、迷った。けれど、僕は———[p][wait_cancel][r]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -184,9 +182,9 @@
 少しの沈黙。少し深呼吸をしてから、友朗が口を開いた。[p]
 [_tb_end_text]
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=3 ]
 #須田友朗
-「………ばーか。絶対嫌に決まってるだろ」[p]
+[wait time=500]「………ばーか。絶対嫌に決まってるだろ」[p][wait_cancel][r]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -282,9 +280,9 @@
 [s  ]
 *LB3002
 
-[tb_start_text mode=1 ]
+[tb_start_text mode=3 ]
 #
-後ろ髪を引かれるような思いはあった。けれど、こうまで買ってくれるなら…[p]
+[wait time=500]後ろ髪を引かれるような思いはあった。けれど、こうまで買ってくれるなら…[p][wait_cancel][r]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -328,14 +326,19 @@
 [_tb_end_text]
 
 [chara_hide  name="須田友朗"  time="1000"  wait="true"  pos_mode="true"  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
-[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
-[tb_start_text mode=1 ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[tb_start_text mode=4 ]
 #
-———後日。[p]
+———後日。
 [_tb_end_text]
 
+[mask_off  time="500"  effect="fadeOut"  ]
+[tb_start_text mode=4 ]
+[l]
+[_tb_end_text]
+
+[cm  ]
 [chara_show  name="メルシー"  time="1000"  wait="true"  left="32"  top="77"  width="654"  height="654"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #メルシー

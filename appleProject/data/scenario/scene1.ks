@@ -53,9 +53,9 @@
 [_tb_end_text]
 
 [cm  ]
-[tb_start_text mode=1 ]
+[tb_start_text mode=3 ]
 #
-———誰もが、どうせ無理だろうと。諦めるだろうと、思っていた。[p]
+[wait time=500]———誰もが、どうせ無理だろうと。諦めるだろうと、思っていた。[p][wait_cancel][r]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -70,10 +70,10 @@
 「まず、部員集めをして、それから顧問を頼める先生を探してかぁ……よし、頑張ろう」[p]
 [_tb_end_text]
 
-[tb_start_text mode=2 ]
+[tb_start_text mode=3 ]
 #
-諦める気など、その少年には欠片もなかった。[l][r]
-彼の名は千石陽翔。演劇部を志して入学した高校1年生だ。[l][r]
+諦める気など、その少年には欠片もなかった。[l][wait time=500][r]
+彼の名は千石陽翔。演劇部を志して入学した高校1年生だ。[p][wait_cancel][r]
 [_tb_end_text]
 
 [cm  ]
@@ -85,9 +85,9 @@
 [live2d_hide  name="oda"  ]
 *LB1001
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  cross="true"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  cross="true"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [live2d_show  name="oda"  x="-0.1"  y="-0.2"  scale="1.39"  ]
 [tb_start_text mode=3 ]
 #千石陽翔

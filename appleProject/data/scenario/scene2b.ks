@@ -2,9 +2,7 @@
 
 [live2d_new  model_id="ishi"  breath="true"  lip_time="100"  jname="先輩女子"  lip="true"  ]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  jname="千石陽翔"  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [cm  ]
 [live2d_show  name="oda"  x="-0.38"  y="-0.09"  scale="0.79"  ]
@@ -134,13 +132,18 @@
 #
 [_tb_end_text]
 
-[mask  time="2000"  effect="fadeIn"  color="0x000000"  ]
-[mask_off  time="2000"  effect="fadeOut"  ]
-[tb_start_text mode=1 ]
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[tb_start_text mode=4 ]
 #
-二日後。[p]
+二日後。
 [_tb_end_text]
 
+[mask_off  time="500"  effect="fadeOut"  ]
+[tb_start_text mode=4 ]
+[l]
+[_tb_end_text]
+
+[cm  ]
 [tb_start_text mode=1 ]
 #先輩女子
 「おーい君、例のポスターできたよー」[p]

@@ -1,8 +1,6 @@
 
 
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
-[mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [cm  ]
 [tb_start_text mode=1 ]
