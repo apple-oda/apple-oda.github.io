@@ -94,11 +94,26 @@
 「どこから行ってみようかな？」[r]
 [_tb_end_text]
 
+[jump  storage="scene1.ks"  target="*LB1B03"  cond="sf.flgS2a=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="部活未定の生徒に声を掛けてみる"  x="883"  y="96"  width=""  height=""  _clickable_img=""  target="*LB1002"  ]
+*LB1B03
+
+[jump  storage="scene1.ks"  target="*LB1B04"  cond="sf.flgS2b=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="チラシを貼る"  x="883"  y="160"  width=""  height=""  _clickable_img=""  target="*LB1003"  ]
+*LB1B04
+
+[jump  storage="scene1.ks"  target="*LB1B05"  cond="sf.flgS2c=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="知り合いを頼ってみる"  x="883"  y="224"  width=""  height=""  _clickable_img=""  target="*LB1004"  ]
+*LB1B05
+
+[jump  storage="scene1.ks"  target="*LB1B06"  cond="sf.flgS2d=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="看板を持って勧誘へ"  x="883"  y="288"  width=""  height=""  _clickable_img=""  target="*LB1005"  ]
+*LB1B06
+
+[jump  storage="scene1.ks"  target="*LB1B0E"  cond="sf.flgS2e=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="全校集会で呼びかける"  x="883"  y="352"  width=""  height=""  _clickable_img=""  target="*LB1006"  ]
+*LB1B0E
+
 [s  ]
 *LB1002
 

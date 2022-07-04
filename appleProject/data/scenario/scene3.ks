@@ -336,12 +336,13 @@
 ———後日。[p]
 [_tb_end_text]
 
-[chara_show  name="メルシー"  time="1000"  wait="true"  left="672"  top="83"  width="654"  height="654"  reflect="false"  ]
+[chara_show  name="メルシー"  time="1000"  wait="true"  left="32"  top="77"  width="654"  height="654"  reflect="false"  ]
 [tb_start_text mode=1 ]
 #メルシー
 「そっかぁ…頼られちゃったんならしょうがないね。[ruby text="Good"]頑張[ruby text="luck"]って」[p]
 [_tb_end_text]
 
+[chara_show  name="相場一輝"  time="1000"  wait="true"  left="510"  top="19"  width="844"  height="842"  reflect="false"  ]
 [tb_start_text mode=2 ]
 #相場一輝
 「そっか………うん、別にそれならそれでいいよ。うん、いいよ、別に…」[l][r]
