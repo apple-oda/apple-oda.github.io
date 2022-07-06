@@ -1,4 +1,4 @@
-
+[_tb_system_call storage=system/_scene3.ks]
 
 [bg  time="1000"  method="fadeIn"  storage="room.jpg"  ]
 [tb_show_message_window  ]

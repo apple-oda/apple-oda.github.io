@@ -1,4 +1,4 @@
-
+[_tb_system_call storage=system/_scene1.ks]
 
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="千石陽翔"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
@@ -87,7 +87,6 @@
 
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  cross="true"  ]
-[mask_off  time="500"  effect="fadeOut"  ]
 [live2d_show  name="oda"  x="-0.1"  y="-0.2"  scale="1.39"  ]
 [tb_start_text mode=3 ]
 #千石陽翔
@@ -114,6 +113,7 @@
 [glink  color="black"  storage=""  size="20"  text="全校集会で呼びかける"  x="883"  y="352"  width=""  height=""  _clickable_img=""  target="*LB1006"  ]
 *LB1B0E
 
+[mask_off  time="500"  effect="fadeOut"  ]
 [s  ]
 *LB1002
 

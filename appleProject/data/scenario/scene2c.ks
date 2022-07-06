@@ -1,4 +1,4 @@
-
+[_tb_system_call storage=system/_scene2c.ks]
 
 [bg  time="1000"  method="fadeIn"  storage="schoo-library-daytime.jpg"  ]
 [tb_start_tyrano_code]

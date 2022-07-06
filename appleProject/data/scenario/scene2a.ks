@@ -1,4 +1,4 @@
-
+[_tb_system_call storage=system/_scene2a.ks]
 
 [bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
 [tb_show_message_window  ]
