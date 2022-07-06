@@ -1,11 +1,11 @@
 
 
-[bg  time="1000"  method="fadeIn"  storage="schoo-library-daytime.jpg"  ]
 [tb_start_tyrano_code]
 @layopt layer=message0 visible=true
 [position layer=message0 width=1240 height=600 top=55 left=20 color=black opacity=180]
 [_tb_end_tyrano_code]
 
+[bg  time="1000"  method="fadeIn"  storage="schoo-library-daytime.jpg"  ]
 [chara_show  name="相場一輝"  time="1000"  wait="true"  left="781"  top="132"  width="599"  height="599"  reflect="false"  ]
 [tb_start_text mode=2 ]
 相場一輝は、一介の本読みである。[l][r]
