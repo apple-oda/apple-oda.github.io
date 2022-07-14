@@ -72,7 +72,7 @@
 
 [cm  ]
 [mask  time="500"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="0"  method="crossfade"  storage="sora.jpg"  ]
+[bg  time="0"  method="fadeIn"  storage="sora.jpg"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 #？？？
