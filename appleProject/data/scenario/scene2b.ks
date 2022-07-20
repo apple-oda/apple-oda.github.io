@@ -2,7 +2,7 @@
 
 [live2d_new  model_id="ishi"  breath="true"  lip_time="100"  jname="先輩女子"  lip="true"  ]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  jname="千石陽翔"  ]
-[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
 [tb_show_message_window  ]
 [cm  ]
 [live2d_show  name="oda"  x="-0.38"  y="-0.09"  scale="0.79"  ]

@@ -1,6 +1,6 @@
 
 
-[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
 [tb_show_message_window  ]
 [cm  ]
 [tb_start_text mode=1 ]

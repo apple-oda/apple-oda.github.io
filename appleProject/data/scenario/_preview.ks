@@ -4,7 +4,7 @@
 [mask_off time=10]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="千石陽翔"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
-[bg  time="1000"  method="crossfade"  storage="sora-evening.jpg"  ]
+[bg  time="0"  method="fadeIn"  storage="sora-evening.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #千石陽翔
@@ -15,7 +15,7 @@
 #
 [_tb_end_text]
 
-[bg  time="1000"  method="fadeIn"  storage="room-evening.jpg"  cross="true"  ]
+[bg  time="0"  method="fadeIn"  storage="room-evening.jpg"  ]
 [tb_start_text mode=1 ]
 #
 放課後の教室に一人の生徒の声が響き渡る。[p]
@@ -87,8 +87,7 @@
 [live2d_hide  name="oda"  ]
 *LB1001
 
-[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
-[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  cross="true"  ]
+[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  cross="false"  ]
 [live2d_show  name="oda"  x="-0.1"  y="-0.2"  scale="1.39"  ]
 [tb_start_text mode=3 ]
 #千石陽翔
@@ -115,7 +114,6 @@
 [glink  color="black"  storage=""  size="20"  text="全校集会で呼びかける"  x="883"  y="352"  width=""  height=""  _clickable_img=""  target="*LB1006"  ]
 *LB1B0E
 
-[mask_off  time="500"  effect="fadeOut"  ]
 [s  ]
 *LB1002
 
