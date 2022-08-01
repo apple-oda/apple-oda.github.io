@@ -1,6 +1,6 @@
 
 
-[bg  time="0"  method="fadeIn"  storage="schoolgate-day.jpg"  ]
+[bg  time="1000"  method="fadeIn"  storage="schoolgate-day.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #千石陽翔
@@ -83,12 +83,6 @@
 [tb_start_tyrano_code]
 [if exp="sf.flgS2d=='false'"]
 [eval exp="sf.flgS2d='true'"]
-[endif]
-[_tb_end_tyrano_code]
-
-[tb_start_tyrano_code]
-[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
-[jump  storage="scene3.ks"  target=""  ]
 [endif]
 [_tb_end_tyrano_code]
 

@@ -2,7 +2,7 @@
 
 [live2d_new  model_id="ishi"  breath="true"  lip_time="100"  jname="先輩女子"  lip="true"  ]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  jname="千石陽翔"  ]
-[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
 [tb_show_message_window  ]
 [cm  ]
 [live2d_show  name="oda"  x="-0.38"  y="-0.09"  scale="0.79"  ]
@@ -194,6 +194,7 @@
 苦笑して見送ったあと、その先輩は近くに佇んだ同級生に声を掛けた。[p]
 [_tb_end_text]
 
+[live2d_hide  name="oda"  ]
 [tb_start_text mode=1 ]
 #先輩女子
 「ありがとうね、ツールの使い方教えてくれて」[p]
@@ -234,12 +235,6 @@
 [tb_start_tyrano_code]
 [if exp="sf.flgS2b=='false'"]
 [eval exp="sf.flgS2b='true'"]
-[endif]
-[_tb_end_tyrano_code]
-
-[tb_start_tyrano_code]
-[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
-[jump  storage="scene3.ks"  target=""  ]
 [endif]
 [_tb_end_tyrano_code]
 

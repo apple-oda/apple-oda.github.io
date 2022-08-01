@@ -1,6 +1,6 @@
 
 
-[bg  time="0"  method="crossfade"  storage="koutei.jpg"  ]
+[bg  time="1000"  method="crossfade"  storage="koutei.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #先生
@@ -85,12 +85,6 @@
 [tb_start_tyrano_code]
 [if exp="sf.flgS2e=='false'"]
 [eval exp="sf.flgS2e='true'"]
-[endif]
-[_tb_end_tyrano_code]
-
-[tb_start_tyrano_code]
-[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
-[jump  storage="scene3.ks"  target=""  ]
 [endif]
 [_tb_end_tyrano_code]
 

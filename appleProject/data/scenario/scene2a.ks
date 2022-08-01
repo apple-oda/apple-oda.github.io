@@ -1,6 +1,6 @@
 
 
-[bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  ]
+[bg  time="1000"  method="fadeIn"  storage="corridor-day.jpg"  ]
 [tb_show_message_window  ]
 [cm  ]
 [tb_start_text mode=1 ]
@@ -182,14 +182,6 @@
 [if exp="sf.flgS2a=='false'"]
 [eval exp="sf.flgS2a='true'"]
 [endif]
-[_tb_end_tyrano_code]
-
-[tb_start_tyrano_code]
-[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
-[jump  storage="scene3.ks"  target=""  ]
-[endif]
-
-
 [_tb_end_tyrano_code]
 
 [jump  storage="scene1.ks"  target="*LB1001"  ]

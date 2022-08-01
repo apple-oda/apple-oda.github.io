@@ -1,6 +1,12 @@
 
 
-[bg  time="0"  method="fadeIn"  storage="room.jpg"  ]
+[tb_start_text mode=1 ]
+#
+[_tb_end_text]
+
+[cm  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[bg  time="1000"  method="fadeIn"  storage="room.jpg"  ]
 [tb_show_message_window  ]
 [chara_show  name="須田友朗"  time="1000"  wait="true"  left="684"  top="128"  width="597"  height="595"  reflect="false"  ]
 [tb_start_text mode=1 ]

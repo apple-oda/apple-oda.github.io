@@ -2,7 +2,7 @@
 
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="千石陽翔"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
-[bg  time="0"  method="fadeIn"  storage="sora-evening.jpg"  ]
+[bg  time="500"  method="fadeIn"  storage="sora-evening.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #千石陽翔
@@ -85,12 +85,20 @@
 [live2d_hide  name="oda"  ]
 *LB1001
 
+[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
 [bg  time="0"  method="fadeIn"  storage="corridor-day.jpg"  cross="false"  ]
 [live2d_show  name="oda"  x="-0.1"  y="-0.2"  scale="1.39"  ]
 [tb_start_text mode=3 ]
 #千石陽翔
 「どこから行ってみようかな？」[r]
 [_tb_end_text]
+
+[tb_start_tyrano_code]
+[if exp=" sf.flgS2a=='true' && sf.flgS2b=='true' && sf.flgS2c=='true' && sf.flgS2d=='true' && sf.flgS2e=='true' "]
+[live2d_delete_all]
+[jump  storage="scene3.ks"  target=""  ]
+[endif]
+[_tb_end_tyrano_code]
 
 [jump  storage="scene1.ks"  target="*LB1B03"  cond="sf.flgS2a=='true'"  ]
 [glink  color="black"  storage=""  size="20"  text="部活未定の生徒に声を掛けてみる"  x="883"  y="96"  width=""  height=""  _clickable_img=""  target="*LB1002"  ]
@@ -112,6 +120,7 @@
 [glink  color="black"  storage=""  size="20"  text="全校集会で呼びかける"  x="883"  y="352"  width=""  height=""  _clickable_img=""  target="*LB1006"  ]
 *LB1B0E
 
+[mask_off  time="500"  effect="fadeOut"  ]
 [s  ]
 *LB1002
 
