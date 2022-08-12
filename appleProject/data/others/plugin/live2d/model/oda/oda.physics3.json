@@ -3,7 +3,7 @@
 	"Meta": {
 		"PhysicsSettingCount": 1,
 		"TotalInputCount": 4,
-		"TotalOutputCount": 1,
+		"TotalOutputCount": 0,
 		"VertexCount": 2,
 		"EffectiveForces": {
 			"Gravity": {
@@ -63,19 +63,7 @@
 					"Reflect": false
 				}
 			],
-			"Output": [
-				{
-					"Destination": {
-						"Target": "Parameter",
-						"Id": "ParamHairBack"
-					},
-					"VertexIndex": 1,
-					"Scale": 1,
-					"Weight": 100,
-					"Type": "Angle",
-					"Reflect": false
-				}
-			],
+			"Output": [],
 			"Vertices": [
 				{
 					"Position": {
