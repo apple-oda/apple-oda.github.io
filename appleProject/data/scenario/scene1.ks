@@ -1,11 +1,11 @@
+[_tb_system_call storage=system/_scene1.ks]
 
-
-[live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="千石陽翔"  ]
+[live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="？？？？"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
 [bg  time="500"  method="fadeIn"  storage="sora-evening.jpg"  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
-#千石陽翔
+#？？？？
 「えぇーーーーーっ！？　廃部！？　部室も道具もあるのに！？」[p]
 [_tb_end_text]
 
@@ -32,7 +32,7 @@
 
 [live2d_show  name="oda"  x="0.6"  y="-0.34"  scale="1.2"  ]
 [tb_start_text mode=1 ]
-#千石陽翔
+#？？？？
 「どうにかならないんですか、先生」[p]
 [_tb_end_text]
 
@@ -42,7 +42,7 @@
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
-#千石陽翔
+#？？？？
 「……わかりました………」[p]
 [_tb_end_text]
 
@@ -66,7 +66,7 @@
 [live2d_hide  name="nagaisan"  ]
 [live2d_mod  name="oda"  x="0"  y="-0.33"  scale="1.29"  ]
 [tb_start_text mode=1 ]
-#千石陽翔
+#？？？？
 「まず、部員集めをして、それから顧問を頼める先生を探してかぁ……よし、頑張ろう」[p]
 [_tb_end_text]
 

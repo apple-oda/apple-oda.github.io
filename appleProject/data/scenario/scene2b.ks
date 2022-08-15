@@ -1,4 +1,4 @@
-
+[_tb_system_call storage=system/_scene2b.ks]
 
 [live2d_new  model_id="ishi"  breath="true"  lip_time="100"  jname="先輩女子"  lip="true"  ]
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  jname="千石陽翔"  ]
