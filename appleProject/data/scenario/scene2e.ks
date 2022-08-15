@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_scene2e.ks]
+
 
 [bg  time="1000"  method="crossfade"  storage="koutei.jpg"  ]
 [tb_show_message_window  ]

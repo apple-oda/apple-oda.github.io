@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_scene1.ks]
+
 
 [live2d_new  model_id="oda"  breath="true"  lip_time="100"  lip="true"  jname="？？？？"  ]
 [live2d_new  model_id="nagaisan"  breath="true"  lip_time="100"  lip="true"  jname="先生"  ]
