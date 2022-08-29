@@ -67,7 +67,7 @@ function draw() {
  // 点数
  textSize(30);
  textAlign(CENTER);
- text('正解='+goodCount+"  " + "不正="+noCount,widthCenter, 50);    
+ text('正解='+goodCount+"  " + "ミス="+noCount,widthCenter, 50);    
  // お題を表示
  textSize(30);                                             // 文字サイズの指定
  textAlign(CENTER);                                        // テキスト描画位置の指定
