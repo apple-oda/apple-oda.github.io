@@ -70,3 +70,22 @@ function draw() {
     }
   }
 }
+
+// 光らせるやつ、使い方は調べている途中
+function drawLogoRotate() {
+  blendMode(BLEND);
+  background(0, 0, 0, 100);
+  noFill();
+  blendMode(SCREEN);
+
+  for (var i = 1; i < 8; ++i) {
+      strokeWeight(i * 2);
+      stroke(45, 164 - (i * 14), 168, 100 - (i * 5));
+      
+      for (var x = 0; x <= 1000; x = x + 500) {  
+          rotate(frameCount * 0.005);
+  
+          drawLogo(); // ロゴ描画関数読み込み
+      }
+  }
+}
