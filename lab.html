@@ -11,10 +11,10 @@
   <h1>アップル梅田_実験室</h1>
   <h2>日報整形</h2>
   <p>職員名
-  <select name="staff" id="staffList">
-    <option value="小田">小田</option>
-    <option value="海辺">海辺</option>
-  </select>
+    <select name="staff" id="staffList">
+      <option value="小田">小田</option>
+      <option value="海辺">海辺</option>
+    </select>
   </p>
 
   <label for="before_message">整形前の日報:</label><br />
@@ -27,6 +27,10 @@
 
   <label for="after_message">整形済みの日報:</label><br />
   <textarea id="after_message" rows="12" cols="100"></textarea>
+
+  <br />
+
+  <button onclick="copy()">テキストをクリップボードにコピー</button>
 
   <script>
     function sendMessage() {
@@ -53,7 +57,7 @@
       // リストボックスで指定した職員名を全て削除
       let selectedStaff = document.getElementById("staffList").value;
       let reg = new RegExp("(【.*】)\\n" + selectedStaff + "\\t", "g");
-      mes = mes.replace(reg,"$1");
+      mes = mes.replace(reg, "$1");
 
       // 利用者ごとに1行空ける
       mes = mes.replace(/(.*\n【.*】)/g, "\n$1");
@@ -66,6 +70,13 @@
 
       // 成形したテキストをテキストエリアに貼り付け
       document.getElementById("after_message").innerHTML = mes;
+    }
+
+    function copy() {
+      let txt = document.getElementById("after_message").value;
+
+      // クリップボードにコピー
+      navigator.clipboard.writeText(txt);
     }
   </script>
 </body>
