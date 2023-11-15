@@ -10,6 +10,12 @@
 <body>
   <h1>アップル梅田_実験室</h1>
   <h2>日報整形</h2>
+  <p>職員名
+  <select name="staff" id="staffList">
+    <option value="小田">小田</option>
+    <option value="海辺">海辺</option>
+  </select>
+  </p>
 
   <label for="before_message">整形前の日報:</label><br />
   <textarea id="before_message" rows="12" cols="100"></textarea>
@@ -44,8 +50,10 @@
           .replace("支援内容", "\n\n支援内容");
       }
 
-      // 職員名を全て削除
-      mes = mes.replace(/(【.*】)\n小田\t/g, "$1");
+      // リストボックスで指定した職員名を全て削除
+      let selectedStaff = document.getElementById("staffList").value;
+      let reg = new RegExp("(【.*】)\\n" + selectedStaff + "\\t", "g");
+      mes = mes.replace(reg,"$1");
 
       // 利用者ごとに1行空ける
       mes = mes.replace(/(.*\n【.*】)/g, "\n$1");
