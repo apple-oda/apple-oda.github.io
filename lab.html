@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>実験室</title>
+</head>
+
+<body>
+  <h1>アップル梅田_実験室</h1>
+  <h2>日報整形</h2>
+
+  <label for="before_message">整形前の日報:</label><br />
+  <textarea id="before_message" rows="12" cols="100"></textarea>
+
+  <br />
+
+  <!-- 送信ボタン -->
+  <input type="button" value="整形実行" onclick="sendMessage()" /><br />
+
+  <label for="after_message">整形済みの日報:</label><br />
+  <textarea id="after_message" rows="12" cols="100"></textarea>
+
+  <script>
+    function sendMessage() {
+      // テキストエリアの値を取得
+      let mes = document.getElementById("before_message").value;
+
+      // 必要部分の切り出し。[全体報告]から[登録時に……]の直前まで。
+      let str = mes.indexOf("全体報告");
+      let end = mes.lastIndexOf("　登録時にメールを送信する場合はチェック");
+      mes = mes.slice(str, end);
+
+      // 不要なテキストを削除
+      mes = mes.replace(/\nメンバー名【出欠】\t職員名\t内容\n/, "");
+
+      // [申し送り]の内容が無ければ削除、有れば二行空けて成形
+      if (mes.indexOf("申し送り\n支援内容") != -1) {
+        mes = mes.replace("申し送り", "\n");
+      } else {
+        mes = mes
+          .replace("申し送り", "\n\n申し送り")
+          .replace("支援内容", "\n\n支援内容");
+      }
+
+      // 職員名を全て削除
+      mes = mes.replace(/(【.*】)\n小田\t/g, "$1");
+
+      // 利用者ごとに1行空ける
+      mes = mes.replace(/(.*\n【.*】)/g, "\n$1");
+
+      // 内容が書かれていない利用者を削除
+      mes = mes.replace(/.*\n【.*】\n\n/g, "");
+
+      // 上記の処理の末尾用
+      mes = mes.replace(/.*\n【.*】\n$/, "");
+
+      // 成形したテキストをテキストエリアに貼り付け
+      document.getElementById("after_message").innerHTML = mes;
+    }
+  </script>
+</body>
+
+</html>
