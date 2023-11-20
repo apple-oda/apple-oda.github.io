@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チャットGPTが作った適当な診断ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="quiz-container">
+    <h1>チャットGPTが作った適当な診断ゲーム</h1>
+    <p>以下の質問に「はい」または「いいえ」でお答えください。<br>このコードは非常に単純で、本物の性格診断テストとは無関係です。</p>
+    <div id="question-container">
+      <p id="question-text"></p>
+    </div>
+    <div id="button-container">
+      <button id="yes-button" onclick="answerQuestion('yes')">はい</button>
+      <button id="no-button" onclick="answerQuestion('no')">いいえ</button>
+    </div>
+    <div id="result-container" style="display: none;">
+      <h2>診断結果:</h2>
+      <p id="result-text"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
