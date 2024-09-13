@@ -1,3 +1,29 @@
 p {
     color:rgb(0, 89, 255);
 }
+
+h2 {
+    color: red
+}   
+   
+h3 {
+    color:rgb(0,0,200) ;
+    font-size:36px;
+}
+
+h4{
+    color:purple;
+    font-size:24px;
+}
+
+.aaa{
+color:orange;
+}
+
+.bbb p{
+color:brown;
+}
+
+#aka{
+color:aqua;
+}
